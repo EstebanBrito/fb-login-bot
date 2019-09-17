@@ -13,12 +13,12 @@ print('FB LOGIN BOT:')
 email_string = input('Write down your email:')
 pass_string = input('Write down your password:')
 # Open Chrome and load the FB login page
-driver = webdriver.Chrome("/usr/bin/chromedriver")
+driver = webdriver.Chrome("./chromedriver")
 driver.get('https://www.facebook.com/login.php?login_attempt=1&lwv=110')
 print("Opened facebook...")
 # Find the email form input
 email = driver.find_element_by_xpath("//input[@id='email' or @name='email']")
-email.send_keys('game12_2908@hotmail.com')
+email.send_keys(email_string)
 print("Email entered...")
 # Find the password form input
 password = driver.find_element_by_xpath("//input[@id='pass']")
